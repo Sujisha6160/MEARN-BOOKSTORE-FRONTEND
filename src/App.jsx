@@ -14,21 +14,22 @@ import AdminBooks from "./admin/pages/AdminBooks";
 import AdminSettings from "./admin/pages/AdminSettings";
 import { useEffect, useState } from 'react';
 import PreLoader from './common/pages/PreLoader';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [loader, setLoader] = useState(true)
 
-  useEffect(()=>{
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       setLoader(false)
-    },5000)
-  },[])
+    }, 5000)
+  }, [])
 
   return (
     <>
       <Routes>
         {/* Common */}
-        <Route path="/" element={ loader ? <PreLoader/> : <LandingPage />} />
+        <Route path="/" element={loader ? <PreLoader /> : <LandingPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/register" element={<Auth register />} />
@@ -47,6 +48,11 @@ function App() {
         <Route path="/admin-settings" element={<AdminSettings />} />
 
       </Routes>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        theme="colored"
+      />
     </>
   )
 }
