@@ -45,7 +45,7 @@ function Header() {
                     {!token ? <Link to={'/login'}><button className='flex justify-between items-center border border-black rounded px-3 py-2 ms-3 hover:bg-black hover:text-white'><FaRegUser className='me-2' />Login</button></Link>
                         :
                         <div className='relative inline-block tetx-left'>
-                            <button onClick={()=>setDropdownStatus(!dropdownStatus)} className='w-full flex uitems-center px-3 py-2 shadow-lg hover:bg-gray-100 bg-white'>
+                            <button onClick={()=>setDropdownStatus(!dropdownStatus)} className='w-full flex items-center px-3 py-2 shadow-lg hover:bg-gray-100 bg-white'>
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFRPx77U9mERU_T1zyHcz9BOxbDQrL4Dvtg&s" alt="" width={"50px"} height={"50px"} style={{ borderRadius: "50%" }} />
                                 <p className='ms-2'>{username}</p>
                             </button>
