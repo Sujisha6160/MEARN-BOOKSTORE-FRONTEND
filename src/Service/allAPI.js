@@ -24,9 +24,8 @@ export const addBookAPI = async (reqBody, reqHeader) => {
     return await commonAPI("POST", `${SERVERURL}/add-book`,reqBody, reqHeader)
 }
 
-// get all books
-export const getAllBooksAPI = async(searchKey, reqHeader)=>{
-    return await commonAPI("GET",`${SERVERURL}/all-books?search-${searchKey}`,{},reqHeader)
+export const getAllBooksAPI = async (searchKey, reqHeader) => {
+    return await commonAPI("GET",`${SERVERURL}/all-books?search=${searchKey}`,{},reqHeader);
 }
 
 // get a Book
