@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../common/components/Header'
 import Footer from '../../common/components/Footer'
 import { Link } from 'react-router-dom'
 
 function AllBooks() {
+  const [token, setToken] = useState("")
+  const [allBooks, setAllBooks] = useState([])
+  const [allCategory, setAllCategory] = useState([])
+  const [tempBooks, setTempBooks] = useState([])
+  const [searchKey, setSearchKey]= useState("")
+  console.log(searchKey);
+  
   return (
     <>
       <Header />
