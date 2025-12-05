@@ -11,9 +11,7 @@ function Header() {
     const [dropdownStatus, setDropdownStatus] = useState(false)
     const [token, setToken] = useState("")
     const [username, setUsername] = useState("")
-    console.log(token);
-    console.log(username);
-
+    // console.log(token);
 
 
     useEffect(() => {
@@ -35,33 +33,28 @@ function Header() {
                     <img width={"50px"} height={"50px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvFjQNYe6YGfgjWyO1knewZkMworG85p0HSF6CSM71SNoXvmhXWM4z6MAoouVt-86h8ds&usqp=CAU" alt="" />
                     <h1 className='font-bold text-2xl ms-2 md:hidden'>BOOKSTORE</h1>
                 </div>
-                {/* title */}
                 <div className='md:flex justify-center items-center hidden'>
                     <h1 className='text-3xl font-bold'>BOOKSTORE</h1>
                 </div>
-
                 {/* login */}
                 <div className='md:flex justify-end items-center hidden'>
                     <FaInstagram className='me-3 text-2xl' />
                     <FaXTwitter className='me-3 text-2xl' />
                     <FaFacebookSquare className='me-3 text-2xl' />
 
-                    {
-                        !token ?
-                            <Link to={'/login'}><button className='flex justify-between items-center border border-black rounded px-3 py-2 ms-3 hover:bg-black hover:text-white'><FaRegUser className='me-2' />Login</button></Link>
-                            :
-                            <div className='relative inline-block tetx-left'>
-                                <button onClick={() => setDropdownStatus(!dropdownStatus)} className='w-full flex items-center px-3 py-2 shadow-lg hover:bg-gray-100 bg-white'>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFRPx77U9mERU_T1zyHcz9BOxbDQrL4Dvtg&s" alt="" width={"50px"} height={"50px"} style={{ borderRadius: "50%" }} />
-                                    <p className='ms-2'>{username}</p>
-                                </button>
-                                {dropdownStatus && <div className='absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg'>
+                    {!token ? <Link to={'/login'}><button className='flex justify-between items-center border border-black rounded px-3 py-2 ms-3 hover:bg-black hover:text-white'><FaRegUser className='me-2' />Login</button></Link>
+                        :
+                        <div className='relative inline-block tetx-left'>
+                            <button onClick={()=>setDropdownStatus(!dropdownStatus)} className='w-full flex uitems-center px-3 py-2 shadow-lg hover:bg-gray-100 bg-white'>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFRPx77U9mERU_T1zyHcz9BOxbDQrL4Dvtg&s" alt="" width={"50px"} height={"50px"} style={{ borderRadius: "50%" }} />
+                                <p className='ms-2'>{username}</p>
+                            </button>
+                          { dropdownStatus && <div className='absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg'>
 
-                                    <Link to={'/profile'}>  <button className='block py-2 px-4 text-sm text-gray-70 '>Profile</button> </Link>
-                                    <button className='block py-2 px-4 text-sm text-gray-70 '>Logout</button>
-                                </div>}
-                            </div>
-                    }
+                                <Link to={'/profile'}>  <button className='block py-2 px-4 text-sm text-gray-70 '>Profile</button> </Link>
+                                <button className='block py-2 px-4 text-sm text-gray-70 '>Logout</button>
+                            </div>}
+                        </div>}
 
                 </div>
             </div>

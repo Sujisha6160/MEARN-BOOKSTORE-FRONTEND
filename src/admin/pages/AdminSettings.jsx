@@ -1,7 +1,7 @@
 import React from 'react'
 import AdminHeader from '../components/AdminHeader'
+import AdminSideBar from '../components/AdminSidebar'
 import Footer from '../../common/components/Footer'
-import AdminSidebar from '../components/AdminSidebar'
 
 function AdminSettings() {
   return (
@@ -9,7 +9,7 @@ function AdminSettings() {
     <AdminHeader/>
     <div className='md:grid grid-cols-[1fr_4fr]'>
       <div>
-        <AdminSidebar/>
+        <AdminSideBar/>
       </div>
       <div className='p-4'>
         <h1 className='text-3xl text-center font-semibold my-10'>Settings</h1>

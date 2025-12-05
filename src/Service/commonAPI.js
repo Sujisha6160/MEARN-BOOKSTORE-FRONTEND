@@ -1,19 +1,16 @@
-import axios from "axios";
+import axios from 'axios'
 
-
-const commonAPI = async (httpRequest, url, reqBody, reqHeader) =>{
-    const requestConfig ={
+const commonAPI = async(httpRequest, url,reqBody, reqHeader)=>{
+    const requestConfig = {
         method : httpRequest,
         url,
         data : reqBody,
         headers : reqHeader
-
     }
-    return await axios(requestConfig).then(res=>{
-        return res
-    }).catch(err =>{
-        return err
-    })
+   return await axios(requestConfig).then(res=>{
+    return res
+   }).catch(err=>{
+    return err
+   })
 }
-
 export default commonAPI
