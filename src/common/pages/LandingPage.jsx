@@ -102,7 +102,7 @@ function LandingPage() {
           {/* Card 2 */}
           <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center max-w-sm hover:shadow-xl transition-all duration-300">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTNSi5ENEozlbErKXwWXnvR5CRYTCIhUv1XA&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcNzWJ5zXkntRBZ5Lapn0ls6wX2Xs9Wgcs9EvPSsWLh-YY1KBCMJmak3-vTaLkJaHEhdM&usqp=CAU"
+              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?cs=srgb&dl=pexels-italo-melo-881954-2379004.jpg&fm=jpg"
               alt="Testimonial"
               className="rounded-full w-28 h-28 object-cover shadow-md mb-4 border-4 border-gray-100"
             />
@@ -118,7 +118,7 @@ function LandingPage() {
           {/* Card 3 */}
           <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center max-w-sm hover:shadow-xl transition-all duration-300">
             <img
-              src="https://t4.ftcdn.net/jpg/14/81/84/95/360_F_1481849536_ABGRPEIsDeV1HLtZ5psDxjfE12iXOZjP.jpg"
+              src="https://www.shutterstock.com/shutterstock/photos/2122700972/display_1500/stock-photo-image-of-young-asian-woman-company-worker-in-glasses-smiling-and-holding-digital-tablet-standing-2122700972.jpg"
               alt="Testimonial"
               className="rounded-full w-28 h-28 object-cover shadow-md mb-4 border-4 border-gray-100"
             />
